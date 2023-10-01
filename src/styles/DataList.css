@@ -1,0 +1,12 @@
+ol{
+  margin: 0px;
+  padding-left: 1.8em;
+    
+    margin-top:20px;
+    border-top:1px solid #ccc;
+    column-count: 4;
+  }
+li{
+margin-left: 20px;
+}
+
