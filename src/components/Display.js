@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/Display.css";
+import { PropTypes } from "prop-types";
 const Display = ({ lastClickedButton, mockData, mockDataSum }) => {
 	return (
 		<div className="main">
@@ -9,5 +10,9 @@ const Display = ({ lastClickedButton, mockData, mockDataSum }) => {
 		</div>
 	);
 };
-
+Display.propTypes = {
+	lastClickedButton: PropTypes.string,
+	mockData: PropTypes.array,
+	mockDataSum: PropTypes.number,
+};
 export default Display;
