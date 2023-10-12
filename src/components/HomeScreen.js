@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import "../styles/DataManager.css";
+import "../styles/HomeScreen.css";
 import { fetchData } from "../services/MockService";
 import Display from "./Display";
 import Button from "./Button";
 import CreateForm from "./AddNumber";
 import DataList from "./DataList";
 import UpdateForm from "./UpdateForm";
+import { PropTypes } from "prop-types";
 
 //helper function to calculate sum of mockData
 const calculateSum = (data) => {
@@ -155,4 +156,10 @@ const HomeScreen = () => {
 	);
 };
 
+HomeScreen.propTypes = {
+	showAddNumber: PropTypes.bool,
+	EntryIndex: PropTypes.number,
+	showUpdateForm: PropTypes.bool,
+	mockData: PropTypes.array,
+};
 export default HomeScreen;

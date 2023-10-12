@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import Button from "./Button";
+import { PropTypes } from "prop-types";
 
 const AddNumber = ({ showForm, onClose, onSave }) => {
 	const [selectedNumber, setSelectedNumber] = useState("");
 	const handleSave = () => {
-		//call the onSave func wit the selectedNumber
+		//call the onSave func with the selectedNumber
 
 		onSave(selectedNumber);
 		//close the form
@@ -27,5 +28,8 @@ const AddNumber = ({ showForm, onClose, onSave }) => {
 			<Button onClick={onClose} buttonText="Cancel"></Button>
 		</div>
 	);
+};
+AddNumber.protoTypes = {
+	selectedNumber: PropTypes.number,
 };
 export default AddNumber;

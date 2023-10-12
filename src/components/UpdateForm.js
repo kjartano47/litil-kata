@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Button from "./Button";
+import { PropTypes } from "prop-types";
 
 const UpdateForm = ({ showUpdateForm, onUpdate, onCancel }) => {
 	const [updatedValue, setUpdatedValue] = useState("");
@@ -32,5 +33,10 @@ const UpdateForm = ({ showUpdateForm, onUpdate, onCancel }) => {
 			<Button onClick={onCancel} buttonText="Cancel"></Button>
 		</div>
 	);
+};
+
+UpdateForm.propTypes = {
+	entryIndex: PropTypes.number,
+	updatedValue: PropTypes.number,
 };
 export default UpdateForm;
